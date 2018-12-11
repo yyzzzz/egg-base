@@ -21,6 +21,8 @@ module.exports = appInfo => {
     timezone: '+08:00'
   };
 
+  // config.sequelize = new Sequelize("mysql://root:1230@127.0.0.1:3306/eggjs-example");
+
   // 关闭csrf
   config.security = {
     csrf: {
