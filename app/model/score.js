@@ -3,10 +3,11 @@
 module.exports = app => {
   const { STRING, INTEGER, DATE } = app.Sequelize;
 
-  const Exam = app.model.define('exam', {
+  const Score = app.model.define('score', {
     id: { type: INTEGER, primaryKey: true, autoIncrement: true },
     score: INTEGER,
     operate_id: INTEGER,
+    use_time: DATE,
   },{
     freezeTableName: true,
     timestamps: true,
@@ -14,5 +15,5 @@ module.exports = app => {
     createdAt: 'create_time',
   });
 
-  return Exam;
+  return Score;
 };
