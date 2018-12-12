@@ -16,7 +16,7 @@ module.exports = appInfo => {
     host: '127.0.0.1',
     port: 3306,
     username: "root",
-    password: "1230",
+    password: "123456",
     operatorsAliases: false,
     timezone: '+08:00'
   };
@@ -27,7 +27,7 @@ module.exports = appInfo => {
   config.security = {
     csrf: {
       enable: false,
-      ignoreJSON: true,
+      // ignoreJSON: true,
     },
     // 白名单
     // domainWhiteList: ['http://localhost:8080'],

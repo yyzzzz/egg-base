@@ -10,15 +10,13 @@ module.exports = {
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
    const { INTEGER, DATE, STRING } = Sequelize;
-    await queryInterface.createTable('user', {
-      id: { type: INTEGER, primaryKey: true, autoIncrement: true },
-      name: STRING(30),
-      age: INTEGER,
-      email: {type: STRING(255), allowNull: false},// email 地址
-      create_time: DATE,
-      update_time: DATE,
-      company_id: INTEGER,
-    });
+   await queryInterface.createTable('company', {
+     id: { type: INTEGER, primaryKey: true, autoIncrement: true },
+     name: STRING(30),
+     address: STRING(255),
+     created_at: DATE,
+     updated_at: DATE,
+   });
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -29,7 +27,7 @@ module.exports = {
       Example:
       return queryInterface.dropTable('users');
     */
-   await queryInterface.dropTable('user');
+   await queryInterface.dropTable('company');
 
   }
 };
